@@ -1,7 +1,10 @@
 def add_setting(settings_dict, key_value):
     key = key_value[0].lower()
     value = key_value[1].lower()
-
+    
+    if len(key_value) != 2:
+        return "Invalid input. Please provide both key and value."
+    
     if key in settings_dict:
         return f"Setting '{key}' already exists!"
     
@@ -12,7 +15,10 @@ def add_setting(settings_dict, key_value):
 def update_setting(settings_dict, key_value):
     key = key_value[0].lower()
     value = key_value[1].lower()
-
+    
+    if len(key_value) != 2:
+        return "Invalid input. Please provide both key and value."
+        
     if key not in settings_dict:
         return f"Setting '{key}' does not exist!"
 
